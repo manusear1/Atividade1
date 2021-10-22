@@ -1,0 +1,58 @@
+Nome: Manuela Souza Silva
+
+git init: Serve para criar um repositório ou transformar uma pasta vazia existente em repositório. 
+Faça commit:
+git init -b main
+
+git config - global user.name: Serve para armazenar informações sobre o usuário no Git, como o e-mail e o seu nome, consegue criar “apelidos” para os seus comandos e até mesmo trocar a cor das ações do Git.
+Faça commit:
+$ git config user.name> Kate
+$ git config user.name> Kiernan
+
+git config - global user.emailS: Serve para modificar o arquivo de texto de configurações que está localizado no Pc. Podemos configurar informações globais como e-mail, nome de usuário e o editor de texto padrão.
+
+Faça commit:
+$ git config --global user.email "email@example.com"
+
+git remote add origin: Serve para vincular repositórios locais com repositórios remotos. 
+Faça commit: 
+$ git remote add origin https://github.com/user/repo.git # Defina um novo remote $ git remote -v # Verifique o novo remote> origin https://github.com/user/repo.git (fetch )> origin https://github.com/user/repo.git (push)
+
+git status: Serve para verificar em quais estados estão os arquivos. 
+
+Faça commit: 
+# Edit hello.py
+git status
+# hello.py está listado em "Alterações não preparadas para confirmação"
+git add hello.py
+git status
+# hello.py está listado em "Alterações a serem confirmadas"
+git commit
+git status
+# nada para confirmar (diretório de trabalho limpo)
+
+git log: Serve para que você liste e filtre o histórico do projeto e mudanças.
+Faça commit:
+git log --author = "Chronos" -p hello.py
+
+git add: Serve para adicionar o conteúdo atual em caminhos existentes como um todo, mas com algumas opções também pode ser usado para adicionar o conteúdo com apenas uma parte das alterações aplicadas em outros arquivos. 
+
+Faça commit:
+git add [--verbose | -v] [--dry-run | -n] [--force | -f] [--interactive | -i] [--patch | -p] [--edit | -e] [- [não-] todos | - [no-] ignorar-remoção | [--update | -você]] [--intent-to-add | -N] [--refresh] [--ignore-errors] [--ignore-missing] [--renormalize] [--chmod = (+ | -) x] [--pathspec-from-file = <arquivo > [--pathspec-file-nul]] [-] [<pathspec>…]
+
+git commit: Serve para capturar o estado de um projeto naquele momento, guardando os comandos. 
+
+Faça commit:
+git commit
+git commit -a
+git commit -m "mensagem de confirmação"
+git commit -am "mensagem de confirmação"
+git commit --amend
+
+git push: Serve para publicar modificações locais a um repositório central, enviar os aquivos. 
+
+Faça commit:
+git push <remote> <branch>
+git push <remote> --force
+git push <remote> --all
+git push <remote> --tags
